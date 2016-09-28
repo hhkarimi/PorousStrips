@@ -177,13 +177,14 @@ dely = yBar[-1]*L*100 - spl(xExp)[-1]
 xNumPlot = xBar*L*100 - delx
 yNumPlot = yBar*L*100 - dely
 fig,ax = plt.subplots(1,1,figsize=(4,4))
-ax.plot( [-0.5, 2.5], (yNumPlot[0]-5.5/10) * np.array([1, 1]) )
 #ax.plot(xExp,yExp,xExp,spl(xExp),xNumPlot,yNumPlot)
 ax.plot(xExp,spl(xExp),xNumPlot-0.0/100,yNumPlot)
+ax.plot( [-0.5, 2.5], (yNumPlot[0]-5.5/10) * np.array([1, 1]) )
 ax.set_xlabel(r'x [cm]')
 ax.set_ylabel(r'y [cm]')
 ax.set_xlim([-0.5,L*100])
 ax.set_ylim([-L*100,1])
+ax.legend(('smooth exp','numerics'))
 #ax.legend(('raw','smooth exp','numerics'))
 ax.grid(True)
 
