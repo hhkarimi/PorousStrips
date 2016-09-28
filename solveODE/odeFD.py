@@ -1,8 +1,6 @@
 #!/Users/hkarimi/anaconda/lib/python3.5
 
 ##################################### LOAD MODULES #####################################
-    # for system info
-import sys
     # for performance timing
 import time # use as: tic = time.time(); elapsedTime = time.time() - tic
     # numerical modules
